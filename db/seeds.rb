@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+TaskCondition.create(:status => "ToDo")
+TaskCondition.create(:status => "Doing")
+TaskCondition.create(:status => "Done")
