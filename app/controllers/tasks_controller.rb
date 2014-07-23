@@ -5,6 +5,8 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @task_conditons = TaskCondition.all
+    @task_conditons.unshift(TaskCondition.new)
   end
 
   # GET /tasks/1
