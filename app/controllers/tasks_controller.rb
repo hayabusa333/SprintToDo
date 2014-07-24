@@ -12,6 +12,8 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @task_conditons = TaskCondition.all
+    @task_conditons.unshift(TaskCondition.new)
   end
 
   # GET /tasks/new
@@ -71,6 +73,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:name, :status)
+      params.require(:task).permit(:name, :status, :memo)
     end
 end

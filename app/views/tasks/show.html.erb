@@ -7,7 +7,12 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @task.status %>
+  <%= @task_conditons[@task.status].status %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @task.memo %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
