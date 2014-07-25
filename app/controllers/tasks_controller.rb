@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.order("status")
     @task_conditons = TaskCondition.all
     @task_conditons.unshift(TaskCondition.new)
   end
