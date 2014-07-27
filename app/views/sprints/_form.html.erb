@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :start %><br>
-    <%= f.datetime_select :start %>
+    <%= f.date_select :start, :use_month_numbers => true, :default => Time.now %>
   </div>
   <div class="actions">
     <%= f.submit %>

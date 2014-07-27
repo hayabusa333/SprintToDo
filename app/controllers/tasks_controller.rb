@@ -4,8 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    puts params[:start]
-    @tasks = Task.order("status")
+    @tasks = Task.where( ["created_at >= ?", params[:start]] )
     @task_conditons = TaskCondition.all
     @task_conditons.unshift(TaskCondition.new)
   end
