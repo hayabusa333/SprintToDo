@@ -13,8 +13,10 @@
       <tr>
         <td><%= sprint.start %></td>
         <td><%= link_to 'Show', :controller => "tasks", :action => "index", :start => sprint.start %></td>
-        <td><%= link_to 'Edit', edit_sprint_path(sprint) %></td>
-        <td><%= link_to 'Destroy', sprint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% if Time.now.weeks_ago(2) < sprint.start  %>
+          <td><%= link_to 'Edit', edit_sprint_path(sprint) %></td>
+          <td><%= link_to 'Destroy', sprint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
