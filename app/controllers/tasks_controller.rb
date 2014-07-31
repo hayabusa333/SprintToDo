@@ -41,6 +41,12 @@ class TasksController < ApplicationController
     end
   end
 
+  # GET /tasks
+  # GET /tasks.json
+  def copy
+
+  end
+
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
